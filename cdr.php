@@ -35,7 +35,7 @@ $paypal="NOK"; //OK || NOK
 <html>
 	<head>		
 		<title>Asterisk CDR</title>
-		<meta http-equiv="Content-Type" content="text/html">
+		<meta http-equiv="Content-Type" content="text/html"; charset=utf8">
 		<link rel="stylesheet" type="text/css" media="print" href="/css/print.css">
 		<SCRIPT LANGUAGE="JavaScript" SRC="./encrypt.js"></SCRIPT>
 		<style type="text/css" media="screen">

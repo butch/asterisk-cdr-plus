@@ -93,7 +93,7 @@ $FG_TOTAL_TABLE_COL = $FG_NB_TABLE_COL;
 if ($FG_DELETION || $FG_EDITION) $FG_TOTAL_TABLE_COL++;
 
 //This variable define the Title of the HTML table
-$FG_HTML_TABLE_TITLE=" - Call Logs - ";
+$FG_HTML_TABLE_TITLE=" - Журнал звонков - ";
 
 //This variable define the width of the HTML table
 $FG_HTML_TABLE_WIDTH="100%";
