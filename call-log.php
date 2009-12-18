@@ -53,19 +53,19 @@ $FG_TABLE_COL = array();
 Calldate Clid Src Dst Dcontext Channel Dstchannel Lastapp Lastdata Duration Billsec Disposition Amaflags Accountcode Uniqueid Serverid
 *******/
 
-$FG_TABLE_COL[]=array ("Calldate", "calldate", "18%", "center", "SORT", "19");
+$FG_TABLE_COL[]=array ("Calldate", "calldate", "25%", "center", "SORT", "19");
 // $FG_TABLE_COL[]=array ("Channel", "channel", "13%", "center", "", "30", "", "", "", "", "", "display_acronym");
 $FG_TABLE_COL[]=array ("Source", "src", "10%", "center", "", "30");
 // $FG_TABLE_COL[]=array ("Clid", "clid", "12%", "center", "", "30");
 // $FG_TABLE_COL[]=array ("Lastapp", "lastapp", "8%", "center", "", "30");
 
 // $FG_TABLE_COL[]=array ("Lastdata", "lastdata", "12%", "center", "", "30");
-$FG_TABLE_COL[]=array ("Dst", "dst", "9%", "center", "SORT", "30");
-$FG_TABLE_COL[]=array ("APP", "dst", "9%", "center", "", "30","list", $appli_list);
+$FG_TABLE_COL[]=array ("Dst", "dst", "15%", "center", "SORT", "30");
+$FG_TABLE_COL[]=array ("APP", "dst", "12%", "center", "", "30","list", $appli_list);
 //$FG_TABLE_COL[]=array ("Serverid", "serverid", "7%", "center", "", "30");
 $FG_TABLE_COL[]=array ("Disposition", "disposition", "9%", "center", "", "30");
 if ((!isset($resulttype)) || ($resulttype=="min")) $minute_function= "display_minute";
-$FG_TABLE_COL[]=array ("Duration", "duration", "6%", "center", "SORT", "30", "", "", "", "", "", "$minute_function");
+$FG_TABLE_COL[]=array ("Duration", "duration", "8%", "center", "SORT", "30", "", "", "", "", "", "$minute_function");
 
 
 $FG_TABLE_COL[]=array ("Userfield", "userfield", "8%", "center", "", "20");
