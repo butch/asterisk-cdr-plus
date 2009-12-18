@@ -1,0 +1,196 @@
+- CDR report (monthly or daily)
+- monthly traffic reports
+- DAILY LOAD !!!
+- compare call load with previous days
+- many criterias to define the report
+- export CDR report to PDF
+- export CDR report to CSV
+- support MYSQL & POSTGRESQL
+- etc... 
+
+
+
+
+!Asterisk-stat!
+
+Pretty CDR Analyser, easy way to analyze your CDR records!
+
+Asterisk-Stat is providing different reports & Graph to allow
+the Asterisk-admin to analyse quickly and easily the traffic on their Asterisk server.
+All the graphic & reports are based over the CDR database. 
+
+
+__LAST RELEASE :__
+    * V2.0 (03 March 2005)
+
+
+__FEATURES :__
+    * - CDR REPORT (MONTHLY or DAILY)
+    * - MONTHLY TRAFFIC
+    * - DAILY LOAD
+    * - COMPARE CALL LOAD WITH PREVIOUS DAYS
+    * - MANY CRITERIAS TO DEFINE THE REPORT
+    * - EXPORT CDR REPORT TO PDF
+    * - EXPORT CDR REPORT TO CSV
+    * - SUPPORT MYSQL & POSTGRESQL
+    * - MANY OTHERS :)
+	
+
+
+__REQUIREMENTS :__
+
+    * - APACHE / HTTP SERVER
+    * - PHP
+    * - POSTGRESQL OR MYSQL
+    * - PHP-PGSQL OR PHP-MYSQL
+    * - NEED GD LIBRARY
+    * - JPGRAPH_LIB (included)
+
+
+__ADVICES :__
+
+    * - IMPROVE SPEED RESULT WITH INDEX:
+      POSTGRESQL : CREATE INDEX calldate_ind ON cdr USING btree (calldate)
+      MYSQL : ALTER TABLE `cdr` ADD INDEX ( `calldate` )
+    * - [OPTIONAL]
+      POSTGRESQL : CREATE INDEX dst_ind ON cdr USING btree (dst)
+      POSTGRESQL : CREATE INDEX accountcode_ind ON cdr USING btree (accountcode)
+      MYSQL : ALTER TABLE `cdr` ADD INDEX ( `dst` )
+      MYSQL : ALTER TABLE `cdr` ADD INDEX ( `accountcode` ) 
+	  
+
+__MORE INFO :__
+* [http://areski.net/asterisk-stat-v2/about.php]
+
+
+__DOWNLOAD :__
+* [http://areski.net/asterisk-stat-v2/asterisk-stat-v2.tar.gz]
+
+
+__INSTALL :__
+
+	Edit defines.php files
+
+    * WEBROOT: This is the root URL of the application.
+      Example: http://youdomain.com/asterisk-stat/
+    * FSROOT: This is the server path which contain the application.
+      Example: /home/users/asterisk-stat/
+    * HOST: This is the Database host name.
+      Example: localhost
+    * PORT: Database port.
+      Example: 5432
+    * USER: Username to access to the database.
+      Example: username
+    * PASS: Database password of the user.
+      Example: password
+    * DBNAME: Name of the Database.
+      Example: asteriskcdr
+    * DB_TYPE: Database type.
+      support: mysql and postgres
+    * DB_TABLENAME: Table of the database containing the CDR.
+      Example: cdrtable
+    * appli_list: PHP array used to associate extension to a name. This can be useful if you want to give more signification during the CDR browsing
+      $appli_list['4677']=array("Voicemail");
+      $appli_list['6544']=array("Conference-MeetMe");
+
+__Tested with:__
+PHP Version 4.3.1
+- psql (PostgreSQL) 7.2.4
+- mysql  Ver 11.18 Distrib 3.23.58, 
+
+__Contact : areski (alt) e-group (dot) org __
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FEATURES :
+
+    * - CDR REPORT (MONTHLY or DAILY)
+    * - MONTHLY TRAFFIC
+    * - DAILY LOAD
+    * - COMPARE CALL LOAD WITH PREVIOUS DAYS
+    * - MANY CRITERIAS TO DEFINE THE REPORT
+    * - EXPORT CDR REPORT TO PDF
+    * - EXPORT CDR REPORT TO CSV
+    * - SUPPORT MYSQL & POSTGRESQL
+    * - MANY OTHERS :)
+
+
+REQUIREMENTS :
+
+    * - APACHE / HTTP SERVER
+    * - PHP
+    * - POSTGRESQL OR MYSQL
+    * - PHP-PGSQL OR PHP-MYSQL
+    * - NEED GD LIBRARY
+    * - JPGRAPH_LIB (included)
+
+
+ADVICES :
+
+    * - IMPROVE SPEED RESULT WITH INDEX:
+      POSTGRESQL : CREATE INDEX calldate_ind ON cdr USING btree (calldate)
+      MYSQL : ALTER TABLE `cdr` ADD INDEX ( `calldate` )
+    * - [OPTIONAL]
+      POSTGRESQL : CREATE INDEX dst_ind ON cdr USING btree (dst)
+      POSTGRESQL : CREATE INDEX accountcode_ind ON cdr USING btree (accountcode)
+      MYSQL : ALTER TABLE `cdr` ADD INDEX ( `dst` )
+      MYSQL : ALTER TABLE `cdr` ADD INDEX ( `accountcode` ) 
+	  
+	  
+More Info :
+    * [http://areski.net/asterisk-stat-v2/about.php]
+
+
+
+Download :
+    * [http://areski.net/asterisk-stat-v2/asterisk-stat-v2.tar.gz]
+
+
+INSTALL :
+
+	Edit defines.php files
+
+    * WEBROOT: This is the root URL of the application.
+      Example: http://youdomain.com/asterisk-stat/
+    * FSROOT: This is the server path which contain the application.
+      Example: /home/users/asterisk-stat/
+    * HOST: This is the Database host name.
+      Example: localhost
+    * PORT: Database port.
+      Example: 5432
+    * USER: Username to access to the database.
+      Example: username
+    * PASS: Database password of the user.
+      Example: password
+    * DBNAME: Name of the Database.
+      Example: asteriskcdr
+    * DB_TYPE: Database type.
+      support: mysql and postgres
+    * DB_TABLENAME: Table of the database containing the CDR.
+      Example: cdrtable
+    * appli_list: PHP array used to associate extension to a name. This can be useful if you want to give more signification during the CDR browsing
+      $appli_list['4677']=array("Voicemail");
+      $appli_list['6544']=array("Conference-MeetMe");
+
+
+
+TESTED WITH:
+PHP Version 4.3.1
+- psql (PostgreSQL) 7.2.4
+- mysql  Ver 11.18 Distrib 3.23.58,
+
+
+
+
+CONTACT : areski ($alt) gmail ($d.ot).d.ot)  com
