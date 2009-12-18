@@ -22,7 +22,7 @@ function cdrpage_getpost_ifset($test_vars)
 cdrpage_getpost_ifset(array('s', 't'));
 
 
-$array = array ("INTRO", "CDR REPORT", "CALLS COMPARE", "MONTHLY TRAFFIC","DAILY LOAD", "CONTACT");
+$array = array ("", "Статистика", "Сравнение звонков", "Трафик за месяц","Ежедневная нагрузка", "");
 $s = $s ? $s : 1;
 $section="section$s$t";
 
@@ -55,8 +55,8 @@ $paypal="NOK"; //OK || NOK
 		<div id="fedora-header">
 			
 			<div id="fedora-header-logo">
-				 <table border="0" cellpadding="0" cellspacing="0"><tr><td><img src="images/asterisk.gif"  alt="CDR (Call Detail Records)"></td><td>
-				 <H1><font color=#990000>&nbsp;&nbsp;&nbsp;CDR (Call Detail Records)</font></H1></td></tr></table>
+				 <table border="0" cellpadding="0" cellspacing="0"><tr><td><img src="images/asterisk.gif"  alt="CDR (Call Detail Records - Детализация звонков)"></td><td>
+				 <H1><font color=#990000>&nbsp;&nbsp;&nbsp;CDR (Call Detail Records - Детализация звонков)</font></H1></td></tr></table>
 			</div>
 
 		</div>

@@ -223,7 +223,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 			
 			<tr>
         		<td align="left" bgcolor="#000033">					
-					<font face="verdana" size="1" color="#ffffff"><b>Select the day</b></font>
+					<font face="verdana" size="1" color="#ffffff"><b>Выберите день</b></font>
 				</td>
       			<td align="left" bgcolor="#acbdee">
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#acbdee"><tr><td>
@@ -259,26 +259,26 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 			
 			<tr>
 				<td class="bar-search" align="left" bgcolor="#555577">			
-					<font face="verdana" size="1" color="#ffffff"><b>&nbsp;&nbsp;DESTINATION</b></font>
+					<font face="verdana" size="1" color="#ffffff"><b>&nbsp;&nbsp;Направление</b></font>
 				</td>				
 				<td class="bar-search" align="left" bgcolor="#cddeff">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>&nbsp;&nbsp;<INPUT TYPE="text" NAME="dst" value="<?=$dst?>"></td>
-				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="dsttype" value="1" <?if((!isset($dsttype))||($dsttype==1)){?>checked<?}?>>Exact</td>
-				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="dsttype" value="2" <?if($dsttype==2){?>checked<?}?>>Begins with</td>
-				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="dsttype" value="3" <?if($dsttype==3){?>checked<?}?>>Contains</td>
-				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="dsttype" value="4" <?if($dsttype==4){?>checked<?}?>>Ends with</td>
+				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="dsttype" value="1" <?if((!isset($dsttype))||($dsttype==1)){?>checked<?}?>>Совпадает</td>
+				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="dsttype" value="2" <?if($dsttype==2){?>checked<?}?>>Начинается с</td>
+				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="dsttype" value="3" <?if($dsttype==3){?>checked<?}?>>Содержит</td>
+				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="dsttype" value="4" <?if($dsttype==4){?>checked<?}?>>Заканчивается на</td>
 				</tr></table></td>
 			</tr>			
 			<tr>
 				<td align="left" bgcolor="#000033">					
-					<font face="verdana" size="1" color="#ffffff"><b>&nbsp;&nbsp;SOURCE</b></font>
+					<font face="verdana" size="1" color="#ffffff"><b>&nbsp;&nbsp;Источник</b></font>
 				</td>				
 				<td class="bar-search" align="left" bgcolor="#acbdee">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#acbdee"><tr><td>&nbsp;&nbsp;<INPUT TYPE="text" NAME="src" value="<?echo "$src";?>"></td>
-				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="sourcetype" value="1" <?if((!isset($sourcetype))||($sourcetype==1)){?>checked<?}?>>Exact</td>
-				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="sourcetype" value="2" <?if($sourcetype==2){?>checked<?}?>>Begins with</td>
-				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="sourcetype" value="3" <?if($sourcetype==3){?>checked<?}?>>Contains</td>
-				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="sourcetype" value="4" <?if($sourcetype==4){?>checked<?}?>>Ends with</td>
+				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="sourcetype" value="1" <?if((!isset($sourcetype))||($sourcetype==1)){?>checked<?}?>>Совпадает</td>
+				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="sourcetype" value="2" <?if($sourcetype==2){?>checked<?}?>>Начинается с</td>
+				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="sourcetype" value="3" <?if($sourcetype==3){?>checked<?}?>>Содержит</td>
+				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="sourcetype" value="4" <?if($sourcetype==4){?>checked<?}?>>Заканчивается на</td>
 				</tr></table></td>
 			</tr>
 			<tr>
@@ -287,10 +287,10 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 				</td>				
 				<td class="bar-search" align="left" bgcolor="#cddeff">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>&nbsp;&nbsp;<INPUT TYPE="text" NAME="clid" value="<?=$clid?>"></td>
-				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="clidtype" value="1" <?if((!isset($clidtype))||($clidtype==1)){?>checked<?}?>>Exact</td>
-				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="clidtype" value="2" <?if($clidtype==2){?>checked<?}?>>Begins with</td>
-				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="clidtype" value="3" <?if($clidtype==3){?>checked<?}?>>Contains</td>
-				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="clidtype" value="4" <?if($clidtype==4){?>checked<?}?>>Ends with</td>
+				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="clidtype" value="1" <?if((!isset($clidtype))||($clidtype==1)){?>checked<?}?>>Совпадает</td>
+				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="clidtype" value="2" <?if($clidtype==2){?>checked<?}?>>Начинается с</td>
+				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="clidtype" value="3" <?if($clidtype==3){?>checked<?}?>>Содержит</td>
+				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="clidtype" value="4" <?if($clidtype==4){?>checked<?}?>>Заканчивается на</td>
 				</tr></table></td>
 			</tr>
 			<tr>
@@ -299,10 +299,10 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 				</td>				
 				<td class="bar-search" align="left" bgcolor="#acbdee">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#acbdee"><tr><td>&nbsp;&nbsp;<INPUT TYPE="text" NAME="userfield" value="<?echo "$userfield";?>"></td>
-				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="userfieldtype" value="1" <?if((!isset($userfieldtype))||($userfieldtype==1)){?>checked<?}?>>Exact</td>
-				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="userfieldtype" value="2" <?if($userfieldtype==2){?>checked<?}?>>Begins with</td>
-				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="userfieldtype" value="3" <?if($userfieldtype==3){?>checked<?}?>>Contains</td>
-				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="userfieldtype" value="4" <?if($userfieldtype==4){?>checked<?}?>>Ends with</td>
+				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="userfieldtype" value="1" <?if((!isset($userfieldtype))||($userfieldtype==1)){?>checked<?}?>>Совпадает</td>
+				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="userfieldtype" value="2" <?if($userfieldtype==2){?>checked<?}?>>Начинается с</td>
+				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="userfieldtype" value="3" <?if($userfieldtype==3){?>checked<?}?>>Содержит</td>
+				<td class="bar-search" align="center" bgcolor="#acbdee"><input type="radio" NAME="userfieldtype" value="4" <?if($userfieldtype==4){?>checked<?}?>>Заканчивается на</td>
 				</tr></table></td>
 			</tr>
 			<tr>
@@ -311,10 +311,10 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 				</td>				
 				<td class="bar-search" align="left" bgcolor="#cddeff">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>&nbsp;&nbsp;<INPUT TYPE="text" NAME="accountcode" value="<?=$accountcode?>"></td>
-				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="accountcodetype" value="1" <?if((!isset($accountcodetype))||($accountcodetype==1)){?>checked<?}?>>Exact</td>
-				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="accountcodetype" value="2" <?if($accountcodetype==2){?>checked<?}?>>Begins with</td>
-				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="accountcodetype" value="3" <?if($accountcodetype==3){?>checked<?}?>>Contains</td>
-				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="accountcodetype" value="4" <?if($accountcodetype==4){?>checked<?}?>>Ends with</td>
+				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="accountcodetype" value="1" <?if((!isset($accountcodetype))||($accountcodetype==1)){?>checked<?}?>>Совпадает</td>
+				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="accountcodetype" value="2" <?if($accountcodetype==2){?>checked<?}?>>Начинается с</td>
+				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="accountcodetype" value="3" <?if($accountcodetype==3){?>checked<?}?>>Содержит</td>
+				<td class="bar-search" align="center" bgcolor="#cddeff"><input type="radio" NAME="accountcodetype" value="4" <?if($accountcodetype==4){?>checked<?}?>>Заканчивается на</td>
 				</tr></table></td>
 			</tr>			
 			<tr>
