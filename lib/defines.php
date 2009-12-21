@@ -83,8 +83,12 @@ function display_2bill($var){
 }
 
 function remove_prefix($phonenumber){
-		
-		if (substr($phonenumber,0,3) == "011"){
+		// our trunks prefix from panasonic
+		if (substr($phonenumber,0,3) == "801"){
+					echo substr($phonenumber,3);
+					return 1;
+		}
+		if (substr($phonenumber,0,3) == "804"){
 					echo substr($phonenumber,3);
 					return 1;
 		}
@@ -96,7 +100,15 @@ function display_acronym($field){
 		echo '<acronym title="'.$field.'">'.substr($field,0,7).'...</acronym>';		
 }
 
-
+function playlink($filename1){
+	$shit = 'rec/'.$filename1.'.wav';
+	if (is_readable($shit)) {
+    	 	// echo "The file $shit  is readable";
+        	return "<a href='$shit'>play</a>";
+        }else{
+        	//echo "no file - $shit";
+        }
+}
 
 
 ?>

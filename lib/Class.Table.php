@@ -93,7 +93,7 @@ class Table {
 				//$row[]=DbFetch($res, $i);
 				$DBHandle -> next_record();
 				$row [] =$DBHandle -> Record;	
-			        //	print_r ($row);
+				// print_r ($row);
 			}
 
 		

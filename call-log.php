@@ -60,7 +60,7 @@ $FG_TABLE_COL[]=array ("Source", "src", "10%", "center", "", "30");
 // $FG_TABLE_COL[]=array ("Lastapp", "lastapp", "8%", "center", "", "30");
 
 // $FG_TABLE_COL[]=array ("Lastdata", "lastdata", "12%", "center", "", "30");
-$FG_TABLE_COL[]=array ("Dst", "dst", "15%", "center", "SORT", "30");
+$FG_TABLE_COL[]=array ("Dst", "dst", "15%", "center", "SORT", "30", $remove_prefix);
 $FG_TABLE_COL[]=array ("APP", "dst", "12%", "center", "", "30","list", $appli_list);
 //$FG_TABLE_COL[]=array ("Serverid", "serverid", "7%", "center", "", "30");
 $FG_TABLE_COL[]=array ("Disposition", "disposition", "9%", "center", "", "30");
@@ -68,16 +68,16 @@ if ((!isset($resulttype)) || ($resulttype=="min")) $minute_function= "display_mi
 $FG_TABLE_COL[]=array ("Duration", "duration", "8%", "center", "SORT", "30", "", "", "", "", "", "$minute_function");
 
 
-$FG_TABLE_COL[]=array ("Userfield", "userfield", "8%", "center", "", "20");
-$FG_TABLE_COL[]=array ("Accountcode", "accountcode", "8%", "center", "", "20");
-
+// $FG_TABLE_COL[]=array ("Userfield", "userfield", "8%", "center", "", "20");
+// $FG_TABLE_COL[]=array ("Accountcode", "accountcode", "8%", "center", "", "20");
+$FG_TABLE_COL[]=array ("Audio", "uuid", "12%", "center", "", "80", "shit");
 $FG_TABLE_DEFAULT_ORDER = "calldate";
 $FG_TABLE_DEFAULT_SENS = "DESC";
 
 // This Variable store the argument for the SQL query
 //$FG_COL_QUERY='calldate, channel, src, clid, lastapp, lastdata, dst, dst, serverid, disposition, duration';
 //$FG_COL_QUERY='calldate, channel, src, clid, lastapp, lastdata, dst, dst, disposition, duration, userfield, accountcode';
-$FG_COL_QUERY='calldate, src, dst, dst, disposition, duration, userfield, accountcode';
+$FG_COL_QUERY='calldate, src, dst, dst, disposition, duration, uuid';
 $FG_COL_QUERY_GRAPH='calldate, duration';
 
 // The variable LIMITE_DISPLAY define the limit of record to display by page
@@ -170,6 +170,7 @@ if ($posted==1){
   $SQLcmd = do_field($SQLcmd, 'channel');
   $SQLcmd = do_field_duration($SQLcmd, 'duration1', 'duration');
   $SQLcmd = do_field_duration($SQLcmd, 'duration2', 'duration');
+  $SQLcmd = do_field($SQLcmd, 'uuid');
 	
 	
   
@@ -604,6 +605,9 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 							}elseif ($FG_TABLE_COL[$i][6]=="list"){
 									$select_list = $FG_TABLE_COL[$i][7];
 									$record_display = $select_list[$recordset[$i]][0];
+							
+							}elseif ($FG_TABLE_COL[$i][6]=="shit"){
+									$record_display = playlink($recordset[$i]);
 							
 							}else{
 									$record_display = $recordset[$i];

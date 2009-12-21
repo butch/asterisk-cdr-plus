@@ -44,6 +44,9 @@ $paypal="NOK"; //OK || NOK
 			@import url("css/docbook.css");
 		</style>
 		<meta name="MSSmartTagsPreventParsing" content="TRUE">
+		<script src="ec/res/domready.js"></script>
+		<script src="ec/res/swfobject.js"></script>
+		<script src="ec/res/wavplayer.js"></script>
 	</head>
 	<body>
 	
