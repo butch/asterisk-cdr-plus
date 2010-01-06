@@ -499,7 +499,7 @@ foreach ($table_graph as $tkey => $data){
  	<IMG SRC="graph_stat.php?min_call=<?=$min_call?>&fromstatsday_sday=<?=$fromstatsday_sday?>&days_compare=<?=$days_compare?>&fromstatsmonth_sday=<?=$fromstatsmonth_sday?>&dsttype=<?=$dsttype?>&sourcetype=<?=$sourcetype?>&clidtype=<?=$clidtype?>&channel=<?=$channel?>&resulttype=<?=$resulttype?>&dst=<?=$dst?>&src=<?=$src?>&clid=<?=$clid?>&userfieldtype=<?=$userfieldtype?>&userfield=<?=$userfield?>&accountcodetype=<?=$accountcodetype?>&accountcode=<?=$accountcode?>" ALT="Stat Graph">
 
 <? }else{ ?>
-	<center><h3>No calls in your selection.</h3></center>
+	<center><h2>No calls in your selection.</h2></center>
 <? } ?>
 
 </center>

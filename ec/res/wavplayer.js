@@ -123,7 +123,7 @@ Event.domReady.add(function() {
 	var Player = document.createElement("div");
 	Player.style.display = "block";
 	Player.setAttribute("id", "WavPlayerBlock");
-	var attachPoint = document.body;
+	var attachPoint = document.header;
 	var attachAnchor = undefined;
 	var hs = document.getElementsByTagName('h3');
 	if (hs.length == 1) {
@@ -132,7 +132,7 @@ Event.domReady.add(function() {
 		attachAnchor = hs.nextSibling;
 	}
 	attachPoint.insertBefore(Player, attachAnchor);
-	var vars = {}; var params = {'scale': 'noscale', 'bgcolor': '#FFFFFF'};
+	var vars = {}; var params = {'scale': 'noscale', 'bgcolor': '#000000'};
 	swfobject.embedSWF("ec/res/wavplayer.swf?gui=full&w=600&h=20", "WavPlayerBlock", "600", "20", "10.0.32.18", "/ec/res/expressInstall.swf", vars, params, params);
 	window.WavPlayer.init();
 });

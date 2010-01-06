@@ -22,8 +22,12 @@ define ("DB_TABLENAME", "cdr");
 // Make more sense to have a text that just a number
 // especially if you have a lot of extension in your dialplan
 $appli_list['601']=array("operators");
-// $appli_list['1712']=array("myappli_02");
-// $appli_list['1713']=array("myappli_03");
+$appli_list['00049967']=array("telfin");
+$appli_list['1001']=array("panas_menu");
+$appli_list['21100038943']=array("terrasip");
+$appli_list['0022912035']=array("8-800-200-3356");
+$appli_list['0019242460']=array("7-499-9404717");
+$appli_list['0022912012']=array("8-800-200-6769");
 
 
 include (FSROOT."lib/DB-modules/phplib_".DB_TYPE.".php");
@@ -93,6 +97,7 @@ function remove_prefix($phonenumber){
 					return 1;
 		}
 		echo $phonenumber;
+	
 }
 
 

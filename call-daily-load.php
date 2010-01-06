@@ -532,5 +532,5 @@ foreach ($table_graph as $tkey => $data){
 </center>
 
 <? }else{ ?>
-	<center><h3>No calls in your selection.</h3></center>
+	<center><h2>No calls in your selection.</h2></center>
 <? } ?>
