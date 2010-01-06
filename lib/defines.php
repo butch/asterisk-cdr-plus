@@ -111,7 +111,7 @@ function playlink($filename1){
     	 	// echo "The file $shit  is readable";
         	return "<a href='$shit'>play</a>";
         }else{
-        	//echo "no file - $shit";
+        	// echo "no file - $shit";
         }
 }
 

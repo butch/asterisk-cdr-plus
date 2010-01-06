@@ -123,7 +123,7 @@ Event.domReady.add(function() {
 	var Player = document.createElement("div");
 	Player.style.display = "block";
 	Player.setAttribute("id", "WavPlayerBlock");
-	var attachPoint = document.header;
+	var attachPoint = document.body;
 	var attachAnchor = undefined;
 	var hs = document.getElementsByTagName('h3');
 	if (hs.length == 1) {
