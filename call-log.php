@@ -53,7 +53,7 @@ $FG_TABLE_COL = array();
 Calldate Clid Src Dst Dcontext Channel Dstchannel Lastapp Lastdata Duration Billsec Disposition Amaflags Accountcode Uniqueid Serverid
 *******/
 
-$FG_TABLE_COL[]=array ("Дата", "calldate", "18%", "center", "SORT", "19");
+$FG_TABLE_COL[]=array ("Дата", "calldate", "13%", "center", "SORT", "19");
 // $FG_TABLE_COL[]=array ("Channel", "channel", "13%", "center", "", "30", "", "", "", "", "", "display_acronym");
 $FG_TABLE_COL[]=array ("Источник", "src", "15%", "center", "", "30");
 // $FG_TABLE_COL[]=array ("Clid", "clid", "12%", "center", "", "30");
@@ -62,7 +62,7 @@ $FG_TABLE_COL[]=array ("Источник", "src", "15%", "center", "", "30");
 // $FG_TABLE_COL[]=array ("Lastdata", "lastdata", "12%", "center", "", "30");
 $FG_TABLE_COL[]=array ("Направление", "dst", "15%", "center", "SORT", "30", $remove_prefix);
 $FG_TABLE_COL[]=array ("доп_инфо", "dst", "12%", "center", "", "30","list", $appli_list);
-//$FG_TABLE_COL[]=array ("Serverid", "serverid", "7%", "center", "", "30");
+$FG_TABLE_COL[]=array ("DstChannel", "dstchannel", "10%", "center", "", "50","dstchannel");
 $FG_TABLE_COL[]=array ("Disposition", "disposition", "15%", "center", "", "30");
 if ((!isset($resulttype)) || ($resulttype=="min")) $minute_function= "display_minute";
 $FG_TABLE_COL[]=array ("Duration", "duration", "8%", "center", "SORT", "30", "", "", "", "", "", "$minute_function");
@@ -70,14 +70,14 @@ $FG_TABLE_COL[]=array ("Duration", "duration", "8%", "center", "SORT", "30", "",
 
 // $FG_TABLE_COL[]=array ("Userfield", "userfield", "8%", "center", "", "20");
 // $FG_TABLE_COL[]=array ("Accountcode", "accountcode", "8%", "center", "", "20");
-$FG_TABLE_COL[]=array ("Audio", "uuid", "17%", "center", "", "80", "shit");
+$FG_TABLE_COL[]=array ("Audio", "uuid", "20%", "center", "", "80", "shit");
 $FG_TABLE_DEFAULT_ORDER = "calldate";
 $FG_TABLE_DEFAULT_SENS = "DESC";
 
 // This Variable store the argument for the SQL query
 //$FG_COL_QUERY='calldate, channel, src, clid, lastapp, lastdata, dst, dst, serverid, disposition, duration';
 //$FG_COL_QUERY='calldate, channel, src, clid, lastapp, lastdata, dst, dst, disposition, duration, userfield, accountcode';
-$FG_COL_QUERY='calldate, src, dst, dst, disposition, duration, uuid';
+$FG_COL_QUERY='calldate, src, dst, dst, dstchannel, disposition, duration, uuid';
 $FG_COL_QUERY_GRAPH='calldate, duration';
 
 // The variable LIMITE_DISPLAY define the limit of record to display by page
@@ -609,6 +609,8 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 							}elseif ($FG_TABLE_COL[$i][6]=="shit"){
 									$record_display = playlink($recordset[$i]);
 							
+							}elseif ($FG_TABLE_COL[$i][6]=="dstchannel"){
+									$record_display = dstchannel($recordset[$i]);
 							}else{
 									$record_display = $recordset[$i];
 							}

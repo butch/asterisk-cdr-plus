@@ -26,7 +26,7 @@ $appli_list['00049967']=array("telfin");
 $appli_list['1001']=array("panas_menu");
 $appli_list['21100038943']=array("terrasip");
 $appli_list['0022912035']=array("8-800-200-3356");
-$appli_list['0019242460']=array("7-499-9404717");
+$appli_list['0019242460']=array("8-800-200-4070");
 $appli_list['0022912012']=array("8-800-200-6769");
 
 
@@ -113,6 +113,16 @@ function playlink($filename1){
         }else{
         	// echo "no file - $shit";
         }
+}
+
+function dstchannel($channel){
+	if (strstr($channel, "sofia/internal/")) {
+		return "<b>".(str_replace("@192.168.2.35","",(str_replace("sofia/internal/", "", $channel))))."</b>";
+		// return preg_replace('80[14](\d+)', '${1}', (str_replace("@192.168.2.35","",(str_replace("sofia/internal/", "", $channel)))));
+	}else{
+		return "";
+	}
+	 
 }
 
 
